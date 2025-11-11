@@ -1,0 +1,113 @@
+/* Base layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* blue-green gradient */
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Container */
+.todo-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.todo-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(102, 166, 255, 0.4); /* soft blue glow */
+}
+
+/* Header */
+.todo-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff6f61;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Input */
+.todo-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ffb4a2;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #ff6f61;
+}
+
+/* Button */
+.todo-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+.todo-button:hover {
+  background-color: #66a6ff;
+  box-shadow: 0 0 12px rgba(102, 166, 255, 0.6); /* glow effect */
+}
+
+/* List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-item {
+  background-color: #f8edeb;
+  border-left: 6px solid #ffb4a2;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item:hover {
+  background-color: #ffe5d9;
+}
+
+/* Completed */
+.todo-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  border-left-color: #cdb4db;
+}
+
+/* Delete button */
+.delete-button {
+  background: none;
+  border: none;
+  color: #ff6f61;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+  color: #c9184a;
+}
